@@ -1,12 +1,10 @@
 <h1 align="center">Portfolio</h1>
 
 <p align="center">
-<a href="https://wesley-breno.github.io/Portfolio/" target="_blank">
-  <img src="images_readme/portfolio.jpeg" width="800px">
-</a>
+
 <br>
 <p align="center">
-Click here to access the <a href="https://wesley-breno.github.io/Portfolio/" target="_blank">portfolio</a>.
+Click here to access the <a href="https://ronbragaglia.github.io/Portfolio//" target="_blank">portfolio</a>.
 </p>
 
 
