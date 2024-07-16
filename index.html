@@ -35,11 +35,12 @@
         }
         .certificados {
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Ajuste para empilhar os certificados */
+            align-items: center;
             margin: 20px 0;
         }
         .certificados a {
-            margin: 10px;
+            margin: 10px 0; /* Margem vertical */
             transition: transform 0.3s;
         }
         .certificados a:hover img {
@@ -57,7 +58,6 @@
     <section>
         <div>
             <h1 id="sobre">Welcome to the portfolio</h1>
-
             <hr/>
             <h2>Presentation</h2>
             <p>
@@ -97,84 +97,72 @@
 
             <div class="hard-skills">
                 <h2>Hard-Skills</h2>
-
                 <a href="https://www.python.org/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://img.icons8.com/fluency/256/python.png" alt="python image"/>
                         <div class="name_skill">Python</div>
                     </div>
                 </a>
-
                 <a href="https://pandas.pydata.org/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://www.alura.com.br/assets/api/cursos/512/introducao-python-pandas.png" alt="Pandas image"/>
                         <div class="name_skill">Pandas</div>
                     </div>
                 </a>
-
                 <a href="https://scikit-learn.org/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" alt="scikit image"/>
                         <div class="name_skill">Scikit learn</div>
                     </div>
                 </a>
-
                 <a href="https://www.tensorflow.org/?hl=pt-br" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png" alt="tensorflow image"/>
                         <div class="name_skill">TensorFlow</div>
                     </div>
                 </a>
-
                 <a href="https://www.anaconda.com/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://hisuiblog.com/wp-content/uploads/2022/06/icons8-anaconda-240.png" alt="Anaconda image"/>
                         <div class="name_skill">Anaconda</div>
                     </div>
                 </a>
-
                 <a href="https://matplotlib.org/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/1200px-Matplotlib_icon.svg.png" alt="Matplotlib image"/>
                         <div class="name_skill">Matplotlib</div>
                     </div>
                 </a>
-
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://img.icons8.com/color/256/javascript--v1.png" alt="javascript image"/>
                         <div class="name_skill">JavaScript</div>
                     </div>
                 </a>
-
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://img.icons8.com/color/256/html-5.png" alt="html image"/>
                         <div class="name_skill">HTML5</div>
                     </div>
                 </a>
-
                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://img.icons8.com/color/256/css3.png" alt="css image"/>
                         <div class="name_skill">CSS3</div>
                     </div>
                 </a>
-
                 <a href="https://www.mysql.com/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://img.icons8.com/color/256/my-sql.png" alt="mysql image"/>
                         <div class="name_skill">MySQL</div>
                     </div>
                 </a>
-
                 <a href="https://www.postgresql.org/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL image"/>
                         <div class="name_skill">PostgreSQL</div>
                     </div>
                 </a>
-
                 <a href="https://git-scm.com/" target="_blank">
                     <div class="hard-skills-image">
                         <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/git_93585.png" alt="Git image"/>
@@ -188,34 +176,25 @@
             <div>
                 <h2 id="certificados">Most relevant certificates</h2>
                 <div class="certificados">
-                    <a href="https://media.licdn.com/dms/image/D4D22AQHzRXKtZiJY-Q/feedshare-shrink_800/0/1713386517777?e=1717027200&v=beta&t=aUzhUPvJIiLtfLQ-v-dpqMslrTtthP8O8G8AxbsICkM" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado" width="150" />
+                    <a href="https://media.licdn.com/dms/image/D4D22AQHzRXKtZiJY-Q/feedshare-shrink_800/0/1713386517777?e=1717027200&v=beta&t=aUzhUPvJIiLtfLQ-v-dpqMslrTtthP8O8G8Axbsu7gY" target="_blank">
+                        <img src="https://hermes.dio.me/certificates/cover/3F8A785A.jpg" alt="Certificado Cibersecurity" width="270px" />
                     </a>
-
+                    <a href="https://www.dio.me/certificate/5WTD6QIZ/share" target="_blank">
+                        <img src="https://hermes.dio.me/certificates/cover/3F8A785A.jpg" alt="Certificado Cibersecurity" width="270px" />
+                    </a>
                     <a href="https://conquerplus.com.br/certificates/4684e5c3-74b3-4c7d-b843-a2f55d9dfed2" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Formação Cybersecurity Specialist" width="270px" />
+                        <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado DIO Campus Expert" width="270px" />
                     </a>
-
-                    <a href="https://hermes.dio.me/certificates/cover/BEB71537.jpg" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/BEB71537.jpg" alt="Certificado boas práticas com Python" width="270px" />
-                    </a>
-                    
-                    <a href="https://hermes.dio.me/certificates/cover/0CA08D72.jpg" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/0CA08D72.jpg" alt="Certificado Prompts assertivos para ChatGPT" width="270px" />
-                    </a>
-
-                    <a href="https://hermes.dio.me/certificates/cover/63794AD8.jpg" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/63794AD8.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
-                    </a>
-
-                    <a href="https://hermes.dio.me/certificates/cover/3C4FE1CF.jpg" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/3C4FE1CF.jpg" alt="Certificado de fundamentos de ETL" width="270px" />
-                    </a>
-
-                    <a href="https://hermes.dio.me/certificates/cover/899AA125.jpg" target="_blank">
-                        <img src="https://hermes.dio.me/certificates/cover/899AA125.jpg" alt="certificado onboarding: Conhececendo a formação ChatGPT for Devs" width="270px" />
+                    <a href="https://www.dio.me/certificate/YKPL9NLP/share" target="_blank">
+                        <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado DIO Campus Expert" width="270px" />
                     </a>
                 </div>
+            </div>
+
+            <hr />
+            <div>
+                <h2 id="projetos">Projects</h2>
+                <p>Check out some of my projects on GitHub!</p>
             </div>
         </div>
     </section>
