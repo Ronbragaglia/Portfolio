@@ -250,71 +250,81 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background-color: #f4f4f4;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
     }
 
     .projetos {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Espaço entre os projetos */
       max-width: 1200px;
       width: 100%;
-      margin: 0 auto;
-      padding: 20px;
     }
 
     .projeto {
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 20px;
       padding: 20px;
       text-align: center;
-      width: 100%;
+      width: 300px; /* Largura fixa para os projetos */
+      box-sizing: border-box; /* Inclui padding e border na largura total */
     }
 
     .projeto-imagem {
-      width: 300px; 
-      height: auto; 
-      max-width: 100%; 
-      margin: 0 auto; 
+      width: 100%; /* Largura da imagem igual ao contêiner do projeto */
+      height: auto; /* Mantém a proporção da altura */
+      max-width: 300px; /* Garante que a imagem não ultrapasse o tamanho do projeto */
+      margin: 0 auto; /* Centraliza a imagem dentro do projeto */
+    }
   </style>
 </head>
 <body>
-  <h2 id="projetos">Projects</h2>
-  <div class="projetos">
-    <!-- Projeto Premiere Game Analyzer -->
-    <div class="projeto">
-      <div class="image-projeto">
-        <picture>
-          <source media="(max-width: 750px)" srcset="URL_DA_IMAGEM_PEQUENA" />
-          <source media="(max-width: 1000px)" srcset="URL_DA_IMAGEM_MEDIA" />
-          <img src="URL_DA_IMAGEM_GRANDE" alt="Premiere Game Analyzer" class="projeto-imagem" />
-        </picture>   
-        <h3>Premiere Game Analyzer</h3>
-        <small>
-          Projection of results of premiere league clubs' matches....
-          <br><br>
-          <a href="LINK_DO_REPOSITORIO" target="_blank">Repository</a>
-        </small>
+  <div class="container">
+    <h2 id="projetos">Projects</h2>
+    <div class="projetos">
+      <!-- Projeto Premiere Game Analyzer -->
+      <div class="projeto">
+        <div class="image-projeto">
+          <picture>
+            <source media="(max-width: 750px)" srcset="URL_DA_IMAGEM_PEQUENA" />
+            <source media="(max-width: 1000px)" srcset="URL_DA_IMAGEM_MEDIA" />
+            <img src="URL_DA_IMAGEM_GRANDE" alt="Premiere Game Analyzer" class="projeto-imagem" />
+          </picture>
+          <h3>Premiere Game Analyzer</h3>
+          <small>
+            Projection of results of premiere league clubs' matches....
+            <br><br>
+            <a href="LINK_DO_REPOSITORIO" target="_blank">Repository</a>
+          </small>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto Análise de Ações -->
-    <div class="projeto">
-      <div class="image-projeto">
-        <h3>Análise de Ações com Python no Google Colab</h3>
-        <small>
-          Este projeto envolve a análise de dados de ações, utilizando Python e bibliotecas populares como Pandas e Matplotlib. A análise inclui a coleta de dados históricos, cálculo de indicadores financeiros, e visualização dos dados para auxiliar na tomada de decisões de investimento.
-          <br><br>
-          <a href="https://github.com/Ronbragaglia/stock-analysis/blob/main/Untitled92.ipynb" target="_blank">Repository</a>
-        </small>
-        <br>
-        <img src="https://blog.focalise.com.br/wp-content/uploads/2017/02/10801774_751061771630172_1535031066964054625_n.jpg" alt="Análise de Ações" class="projeto-imagem" />
+      <!-- Projeto Análise de Ações -->
+      <div class="projeto">
+        <div class="image-projeto">
+          <h3>Análise de Ações com Python no Google Colab</h3>
+          <small>
+            Este projeto envolve a análise de dados de ações, utilizando Python e bibliotecas populares como Pandas e Matplotlib. A análise inclui a coleta de dados históricos, cálculo de indicadores financeiros, e visualização dos dados para auxiliar na tomada de decisões de investimento.
+            <br><br>
+            <a href="https://github.com/Ronbragaglia/stock-analysis/blob/main/Untitled92.ipynb" target="_blank">Repository</a>
+          </small>
+          <br>
+          <img src="https://blog.focalise.com.br/wp-content/uploads/2017/02/10801774_751061771630172_1535031066964054625_n.jpg" alt="Análise de Ações" class="projeto-imagem" />
+        </div>
       </div>
     </div>
   </div>
