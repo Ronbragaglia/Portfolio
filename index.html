@@ -239,23 +239,71 @@
           </div>
         </div>
       
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .projetos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .projeto {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
     .projeto-imagem {
       width: 300px; 
       height: auto; 
       max-width: 100%; 
-    }
+      margin: 0 auto; 
   </style>
 </head>
 <body>
   <h2 id="projetos">Projects</h2>
   <div class="projetos">
+    <!-- Projeto Premiere Game Analyzer -->
+    <div class="projeto">
+      <div class="image-projeto">
+        <picture>
+          <source media="(max-width: 750px)" srcset="URL_DA_IMAGEM_PEQUENA" />
+          <source media="(max-width: 1000px)" srcset="URL_DA_IMAGEM_MEDIA" />
+          <img src="URL_DA_IMAGEM_GRANDE" alt="Premiere Game Analyzer" class="projeto-imagem" />
+        </picture>   
+        <h3>Premiere Game Analyzer</h3>
+        <small>
+          Projection of results of premiere league clubs' matches....
+          <br><br>
+          <a href="LINK_DO_REPOSITORIO" target="_blank">Repository</a>
+        </small>
+      </div>
+    </div>
+
     <!-- Projeto Análise de Ações -->
     <div class="projeto">
       <div class="image-projeto">
