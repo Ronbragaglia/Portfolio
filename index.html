@@ -1,149 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio de Inteligência Artificial</title>
+    <title>Portfólio de Inteligência Artificial</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
-            background-color: #000;
             color: #fff;
+            background: url('https://media.giphy.com/media/4OZzPFF3FrIBW/giphy.gif') no-repeat center center fixed;
+            background-size: cover;
         }
-
         .container {
-            position: relative;
-            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
+        }
+        h1 {
             text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-
-        h1, h2, h3, p {
-            margin: 0;
-            padding: 10px;
-        }
-
-        .projects {
+        .projeto {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
         }
-
-        .project {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 300px;
+        .projeto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .image-projeto {
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            position: relative;
+            margin-bottom: 10px;
         }
-
-        .project img {
-            width: 100%;
-            border-radius: 10px;
+        .projeto h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
-
-        .project h3 {
-            margin-top: 10px;
-            font-size: 1.2em;
+        .projeto small {
+            font-size: 1em;
+            text-align: center;
+            max-width: 600px;
         }
-
-        .project small {
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        .project a {
-            color: #1e90ff;
+        .projeto a {
+            color: #00f;
             text-decoration: none;
         }
-
-        .project a:hover {
+        .projeto a:hover {
             text-decoration: underline;
-        }
-
-        /* Animação de Partículas */
-        .background-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #000;
-        }
-
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        /* Configuração das partículas */
-        @keyframes moveParticles {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
         }
     </style>
 </head>
 <body>
-    <div class="background-animation">
-        <div class="particles">
-            <!-- Partículas animadas -->
-            <div class="particle" style="width: 10px; height: 10px; top: 20%; left: 30%; animation: moveParticles 5s linear infinite;"></div>
-            <div class="particle" style="width: 15px; height: 15px; top: 50%; left: 60%; animation: moveParticles 7s linear infinite;"></div>
-            <div class="particle" style="width: 8px; height: 8px; top: 10%; left: 80%; animation: moveParticles 6s linear infinite;"></div>
-            <div class="particle" style="width: 12px; height: 12px; top: 70%; left: 40%; animation: moveParticles 8s linear infinite;"></div>
-            <!-- Adicione mais partículas conforme necessário -->
-        </div>
-    </div>
     <div class="container">
         <h1>Portfólio de Inteligência Artificial</h1>
-        <h2>Meus Projetos</h2>
-        <div class="projects">
-            <div class="project">
-                <img src="https://www.example.com/image1.png" alt="Imagem do Projeto 1">
-                <h3>Projeto 1: Classificação de Imagens</h3>
-                <small>Descrição do projeto de classificação de imagens usando redes neurais convolucionais. <a href="#">Veja mais</a></small>
-            </div>
 
-            <div class="project">
-                <img src="https://www.example.com/image2.png" alt="Imagem do Projeto 2">
-                <h3>Projeto 2: Análise de Sentimentos</h3>
-                <small>Descrição do projeto de análise de sentimentos em textos utilizando processamento de linguagem natural. <a href="#">Veja mais</a></small>
+        <div class="projeto">
+            <div class="image-projeto">
+                <img src="https://www.example.com/image1.jpg" alt="Imagem do projeto 1">
             </div>
+            <h3>Análise de Ações</h3>
+            <small>
+                Projeto de análise de ações utilizando Google Colab, com o objetivo de avaliar e prever o comportamento do mercado financeiro.
+                <br><br>
+                <a href="https://github.com/Ronbragaglia/stock-analysis/blob/main/Untitled92.ipynb" target="_blank">Repositório</a>
+            </small>
+        </div>
 
-            <div class="project">
-                <img src="https://www.example.com/image3.png" alt="Imagem do Projeto 3">
-                <h3>Projeto 3: Previsão de Séries Temporais</h3>
-                <small>Descrição do projeto de previsão de séries temporais com modelos de machine learning. <a href="#">Veja mais</a></small>
+        <div class="projeto">
+            <div class="image-projeto">
+                <img src="https://www.example.com/image2.jpg" alt="Imagem do projeto 2">
             </div>
+            <h3>Palindrome</h3>
+            <small>
+                Função em Python que verifica se uma palavra é um palíndromo. Um palíndromo é uma palavra que é lida da mesma forma de trás para frente.
+                <br><br>
+                <a href="https://colab.research.google.com/drive/1idMJinhHEujjOCjv_9IJgu9RIHAznF1N?usp=sharing" target="_blank">Repositório</a>
+            </small>
+        </div>
 
-            <div class="project">
-                <img src="https://www.example.com/image4.png" alt="Imagem do Projeto 4">
-                <h3>Projeto 4: Análise de Dados do Titanic</h3>
-                <small>Previsão sobre a sobrevivência dos passageiros do Titanic com base em dados como idade, gênero e classe social. <a href="https://colab.research.google.com/drive/1BhI9Sj13263wkPXvPz1XL7-1FwdGivXJ?usp=sharing" target="_blank">Veja o projeto</a></small>
+        <div class="projeto">
+            <div class="image-projeto">
+                <img src="https://img.freepik.com/vetores-premium/um-fundo-roxo-e-preto-com-um-cadeado-e-uma-placa-de-circuito-com-a-palavra-seguranca_42077-18586.jpg" alt="Imagem do projeto 3">
             </div>
+            <h3>Password Validation</h3>
+            <small>
+                Módulo em Python que valida se uma senha é forte ou suficiente. Uma senha é considerada forte se tiver pelo menos oito caracteres, contendo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial. Utiliza dicionários para cada tipo de caractere.
+                <br><br>
+                <a href="https://colab.research.google.com/drive/1_4Ey-J_jfq_A6BNkcEi0jibcvhWwr9k3?usp=sharing" target="_blank">Repositório</a>
+            </small>
+        </div>
+
+        <div class="projeto">
+            <div class="image-projeto">
+                <img src="https://www.example.com/image3.jpg" alt="Imagem do projeto 4">
+            </div>
+            <h3>Game "Rock, Paper, Scissors, Lizard, Spock"</h3>
+            <small>
+                Programa em que o usuário escolhe um elemento do jogo "Pedra, Papel, Tesoura, Lagarto, Spock", e o computador escolhe outro elemento aleatoriamente. O programa determina o vencedor da rodada com base nas regras do jogo e relata o resultado ao usuário.
+                <br><br>
+                <a href="https://colab.research.google.com/drive/1RbIIrCOKNooQf1GUPs5fyrWSF25KHA8-?usp=sharing" target="_blank">Repositório</a>
+            </small>
+        </div>
+
+        <div class="projeto">
+            <div class="image-projeto">
+                <img src="https://www.example.com/image4.jpg" alt="Imagem do projeto 5">
+            </div>
+            <h3>Word Count</h3>
+            <small>
+                Programa em Python que lê um arquivo .TXT e conta o número de palavras no arquivo de texto.
+                <br><br>
+                <a href="https://colab.research.google.com/drive/1kRFp-8mRiuaFt5gPsIn6xqM3MEl40bzf?usp=sharing" target="_blank">Repositório</a>
+            </small>
         </div>
     </div>
 </body>
 </html>
-       
-            
-        
-
