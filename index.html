@@ -1,151 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Inteligência Artificial</title>
+    <title>Meu Portfólio de Inteligência Artificial</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
             font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
         }
-        
-        #particles-js {
+
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .project small {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .project a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        .background-animation {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
+            background: url('https://cdn.pixabay.com/photo/2016/11/21/16/48/abstract-1845805_960_720.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: animateBackground 30s linear infinite;
         }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        h1, h3 {
-            margin: 0;
-        }
-        
-        .projeto {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .image-projeto img {
-            max-width: 100%;
-            border-radius: 10px;
+
+        @keyframes animateBackground {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
+    <div class="background-animation"></div>
     <div class="container">
         <h1>Portfólio de Inteligência Artificial</h1>
-        <!-- Adicione seus projetos aqui -->
-        <div class="projeto">
-            <div class="image-projeto">
-                <img src="https://www.example.com/seu-projeto-imagem.jpg" alt="Projeto 1">
-                <h3>Projeto em Python - Análise de Passageiros do Titanic</h3>
-                <small>
-                    Preveja se um passageiro do Titanic sobreviveu com base em informações como idade, gênero, classe socioeconômica, entre outros dados. É um problema de classificação binária onde o aprendizado de máquina é usado para criar um modelo capaz de fazer essa previsão.
-                    <br><br>
-                    <a href="https://colab.research.google.com/drive/1BhI9Sj13263wkPXvPz1XL7-1FwdGivXJ?usp=sharing" target="_blank">Repositório</a>
-                </small>
+        <h2>Meus Projetos</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://www.example.com/image1.png" alt="Imagem do Projeto 1">
+                <h3>Projeto 1: Classificação de Imagens</h3>
+                <small>Descrição do projeto de classificação de imagens usando redes neurais convolucionais. <a href="#">Veja mais</a></small>
+            </div>
+
+            <div class="project">
+                <img src="https://www.example.com/image2.png" alt="Imagem do Projeto 2">
+                <h3>Projeto 2: Análise de Sentimentos</h3>
+                <small>Descrição do projeto de análise de sentimentos em textos utilizando processamento de linguagem natural. <a href="#">Veja mais</a></small>
+            </div>
+
+            <div class="project">
+                <img src="https://www.example.com/image3.png" alt="Imagem do Projeto 3">
+                <h3>Projeto 3: Previsão de Séries Temporais</h3>
+                <small>Descrição do projeto de previsão de séries temporais com modelos de machine learning. <a href="#">Veja mais</a></small>
+            </div>
+
+            <div class="project">
+                <img src="https://www.example.com/image4.png" alt="Imagem do Projeto 4">
+                <h3>Projeto 4: Análise de Dados do Titanic</h3>
+                <small>Previsão sobre a sobrevivência dos passageiros do Titanic com base em dados como idade, gênero e classe social. <a href="https://colab.research.google.com/drive/1BhI9Sj13263wkPXvPz1XL7-1FwdGivXJ?usp=sharing" target="_blank">Veja o projeto</a></small>
             </div>
         </div>
-        <!-- Adicione mais projetos conforme necessário -->
     </div>
-    
-    <!-- Biblioteca Particles.js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
 </body>
 </html>
+      
+                   
+                    
+               
+                    
