@@ -6,110 +6,146 @@
     <title>Portfólio de Inteligência Artificial</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
         }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
         .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        .projetos {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
-        }
-        .projeto {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 20px;
-            text-align: left;
-        }
-        .image-projeto {
+            min-height: 100vh;
+            color: white;
             text-align: center;
+            padding: 20px;
         }
+        
+        h1, h3 {
+            margin: 0;
+        }
+        
+        .projeto {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
         .image-projeto img {
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        h3 {
-            color: #333;
-            margin: 10px 0;
-        }
-        small {
-            color: #666;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="container">
-        <h1>Meu Portfólio de Inteligência Artificial</h1>
-        <div class="projetos">
-            <div class="projeto">
-                <div class="image-projeto">
-                    <img src="https://example.com/path/to/image1.jpg" alt="Descrição da Imagem do Projeto 1">
-                </div>
-                <h3>Projeto de Classificação de Imagens com Redes Neurais Convolucionais</h3>
+        <h1>Portfólio de Inteligência Artificial</h1>
+        <!-- Adicione seus projetos aqui -->
+        <div class="projeto">
+            <div class="image-projeto">
+                <img src="https://www.example.com/seu-projeto-imagem.jpg" alt="Projeto 1">
+                <h3>Projeto em Python - Análise de Passageiros do Titanic</h3>
                 <small>
-                    Desenvolvimento de um modelo de rede neural convolucional para a classificação de imagens em diferentes categorias. Utilizando técnicas avançadas de aprendizado profundo para melhorar a precisão e eficiência do modelo.
-                    <br><br>
-                    <a href="https://colab.research.google.com/drive/1A3LQ1rTlnTsE4wI6Cs8Wx5PR4K1oZq48?usp=sharing" target="_blank">Repositório</a>
-                </small>
-            </div>
-
-            <div class="projeto">
-                <div class="image-projeto">
-                    <img src="https://example.com/path/to/image2.jpg" alt="Descrição da Imagem do Projeto 2">
-                </div>
-                <h3>Projeto de Análise de Sentimentos com Processamento de Linguagem Natural</h3>
-                <small>
-                    Criação de um modelo para análise de sentimentos em textos utilizando técnicas de processamento de linguagem natural (NLP). O projeto envolve a construção e treinamento de um modelo para classificar sentimentos em textos.
-                    <br><br>
-                    <a href="https://colab.research.google.com/drive/1D6BbVZ9_2S3XkEoN0lz7a1yS95H6EdzG?usp=sharing" target="_blank">Repositório</a>
-                </small>
-            </div>
-
-            <div class="projeto">
-                <div class="image-projeto">
-                    <img src="https://example.com/path/to/image3.jpg" alt="Descrição da Imagem do Projeto 3">
-                </div>
-                <h3>Projeto de Recomendação de Produtos com Algoritmos de Filtragem Colaborativa</h3>
-                <small>
-                    Implementação de um sistema de recomendação de produtos utilizando algoritmos de filtragem colaborativa. O projeto visa melhorar a experiência do usuário ao fornecer recomendações personalizadas com base em histórico de compras.
-                    <br><br>
-                    <a href="https://colab.research.google.com/drive/1H9F3kQrgOFE1RQ9JdoBo1gbK7nDkg5a5?usp=sharing" target="_blank">Repositório</a>
-                </small>
-            </div>
-
-            <div class="projeto">
-                <div class="image-projeto">
-                    <img src="https://s2-oglobo.glbimg.com/b6kL6G33UfsqhPqMqDAsms7zleU=/0x0:631x430/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/o/5/gqabXCTae8Ldtp3ufGoQ/titanic.png" alt="Análise dos Passageiros do Titanic">
-                </div>
-                <h3>Projeto em Python: Machine Learning para Passageiros do Titanic</h3>
-                <small>
-                    Previsão de sobrevivência dos passageiros do Titanic com base em informações como idade, gênero, classe socioeconômica e número de parentes a bordo. É um problema de classificação binária onde o aprendizado de máquina é usado para criar um modelo capaz de fazer essa previsão.
+                    Preveja se um passageiro do Titanic sobreviveu com base em informações como idade, gênero, classe socioeconômica, entre outros dados. É um problema de classificação binária onde o aprendizado de máquina é usado para criar um modelo capaz de fazer essa previsão.
                     <br><br>
                     <a href="https://colab.research.google.com/drive/1BhI9Sj13263wkPXvPz1XL7-1FwdGivXJ?usp=sharing" target="_blank">Repositório</a>
                 </small>
             </div>
         </div>
+        <!-- Adicione mais projetos conforme necessário -->
     </div>
+    
+    <!-- Biblioteca Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
