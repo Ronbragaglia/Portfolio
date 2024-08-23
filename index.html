@@ -13,23 +13,139 @@
       style="border-radius: 100%;"
     />
     <style>
+        /* Body and background styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .profile h2 {
+            font-size: 1.5em;
+            margin: 0;
+            color: #666;
+        }
+
+        .profile p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .section p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .section a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
         .view-more {
             text-align: center;
             margin-top: 20px;
         }
+
         .certificados a {
             display: inline-block;
             margin: 10px;
             transition: transform 0.3s;
         }
-        
+
         .certificados a:hover img {
             transform: scale(1.05);
             filter: brightness(1.1);
         }
+
+        /* Background animation */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #ff0066, #ffcc00, #00cc99, #00b3e6);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <header>
         <a href="#">About me</a>
         <a href="#certificados">Certificates</a>
@@ -37,174 +153,147 @@
     </header>
 
     <section>
-        <div>
-            <h1 id="sobre">Welcome to the portfolio</h1>
-
-            <hr/>
-            <br>
-
-            <h2>Presentation</h2>
-            <p>
-                Hello, my name is Rone Bragaglia, and I am an AI engineer.
-                <br>   
-                <br>       
-                I began my journey as a programmer in 2019, and since then, I have kept myself updated with the latest trends and technologies in the field through studies in courses, bootcamps, networking, and self-directed learning. My goal is always to expand my knowledge and skills to become a more competent professional.
+        <div class="container">
+            <div class="profile">
+                <h1 id="sobre">Welcome to the portfolio</h1>
+                <hr/>
+                <h2>Presentation</h2>
+                <p>
+                    Hello, my name is Rone Bragaglia, and I am an AI engineer.
+                    <br>   
+                    <br>       
+                    I began my journey as a programmer in 2019, and since then, I have kept myself updated with the latest trends and technologies in the field through studies in courses, bootcamps, networking, and self-directed learning. My goal is always to expand my knowledge and skills to become a more competent professional.
+                    <br>
+                    <br>
+                    <br>Ambassador of the Dio platform and am looking for new opportunities and challenges to further grow in the field.
+                    <br>
+                    On this website, you can explore some of my key technical skills and my most relevant projects in the development field. I'm very pleased with your visit and hope you find useful information about my work. If you can't find what you're looking for, please feel free to access my contact information below. I'm here to assist you and answer any questions you may have. ❤☕
+                </p>
                 <br>
-                <br>
-                <br>Ambassador of the Dio platform and am looking for new opportunities and challenges to further grow in the field.
-                <br>
-                On this website, you can explore some of my key technical skills and my most relevant projects in the development field. I'm very pleased with your visit and hope you find useful information about my work. If you can't find what you're looking for, please feel free to access my contact information below. I'm here to assist you and answer any questions you may have. ❤☕
-            </p>
-
-            <br>
-
-            <a href="https://github.com/Ronbragaglia" target="_blank">
-                <img
-                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-                    alt="github image"
-                    height="30px"
-                    width="80px"
-                />
-            </a>
-            <a href="https://www.linkedin.com/in/rone-bragaglia-a6aa60157" target="_blank">
-                <img
-                    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                    alt="image linkedin"
-                    height="30px"
-                    width="98px"
-                />
-            </a>
-
-            <div>
-                <a href="https://www.dio.me/users/ronebragagliasso">
-                    <img src="https://github.com/Hadryanpaulo/Hadryanpaulo/raw/b55de4628a36eaad43f0edc2709993529ae48b37/dio.me.jpeg" alt="DIO Logo" width="70">
+                <a href="https://github.com/Ronbragaglia" target="_blank">
+                    <img
+                        src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                        alt="github image"
+                        height="30px"
+                        width="80px"
+                    />
                 </a>
-            </div>
-
-            <hr />
-
-            <div class="hard-skills">
-                <h2>Hard-Skills</h2>
-
-                <a href="https://www.python.org/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://img.icons8.com/fluency/256/python.png" alt="python image" />
-                        <div class="name_skill">Python</div>
-                    </div>
+                <a href="https://www.linkedin.com/in/rone-bragaglia-a6aa60157" target="_blank">
+                    <img
+                        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                        alt="image linkedin"
+                        height="30px"
+                        width="98px"
+                    />
                 </a>
-
-                <a href="https://pandas.pydata.org/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://www.alura.com.br/assets/api/cursos/512/introducao-python-pandas.png" alt="Pandas image" />
-                        <div class="name_skill">Pandas</div>
-                    </div>
-                </a>
-
-                <a href="https://scikit-learn.org/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" alt="scikit image" />
-                        <div class="name_skill">Scikit learn</div>
-                    </div>
-                </a>
-
-                <a href="https://www.tensorflow.org/?hl=pt-br" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png" alt="tensorflow image" />
-                        <div class="name_skill">TensorFlow</div>
-                    </div>
-                </a>
-
-                <a href="https://www.anaconda.com/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://hisuiblog.com/wp-content/uploads/2022/06/icons8-anaconda-240.png" alt="Anaconda image" />
-                        <div class="name_skill">Anaconda</div>
-                    </div>
-                </a>
-
-                <a href="https://matplotlib.org/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/1200px-Matplotlib_icon.svg.png" alt="Matplotlib image" />
-                        <div class="name_skill">Matplotlib</div>
-                    </div>
-                </a>
-
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://img.icons8.com/color/256/javascript--v1.png" alt="javascript image" />
-                        <div class="name_skill">JavaScript</div>
-                    </div>
-                </a>
-
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://img.icons8.com/color/256/html-5.png" alt="html image" />
-                        <div class="name_skill">HTML5</div>
-                    </div>
-                </a>
-
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://img.icons8.com/color/256/css3.png" alt="css image" />
-                        <div class="name_skill">CSS3</div>
-                    </div>
-                </a>
-
-                <a href="https://www.mysql.com/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://img.icons8.com/color/256/my-sql.png" alt="mysql image" />
-                        <div class="name_skill">MySQL</div>
-                    </div>
-                </a>
-
-                <a href="https://www.postgresql.org/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL image" />
-                        <div class="name_skill">PostgreSQL</div>
-                    </div>
-                </a>
-
-                <a href="https://git-scm.com/" target="_blank">
-                    <div class="hard-skills-image">
-                        <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/git_93585.png" alt="Git image" />
-                        <div class="name_skill">Git</div>
-                    </div>
-                </a>
-            </div>
-
-            <br />
-            <hr />
-
-            <div>
-               <h2 id="certificados">Most relevant certificates</h2>
-               <div class="certificados">
-          <a href="https://hermes.dio.me/certificates/cover/63794AD8.jpg" target="_blank">
-    <img src="https://hermes.dio.me/certificates/cover/63794AD8.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
-</a>
-
-<a href="https://conquerplus.com.br/certificates/4684e5c3-74b3-4c7d-b843-a2f55d9dfed2" target="_blank">
-    <img src="https://drive.conqueronline.com.br/Certificados/Intelig%C3%AAncia%20Artificial:%20eleve%20sua%20produtividade%20e%20acelere%20sua%20carreira/1719270973714-e6665b0b-954f-4a81-8d38-d2ff61f1630e.jpeg" alt="Certificado inteligência artificial" width="270px" />
-</a>
-
-<a href="https://www.dio.me/certificate/YKPL9NLP/share" target="_blank">
-    <img src="https://hermes.dio.me/certificates/cover/YKPL9NLP.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
-</a>
-
-<a href="https://www.dio.me/certificate/0C19CA48/share" target="_blank">
-    <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado Formação Cybersecurity Specialist" width="270px" />
-</a>
-
-<a href="https://hermes.dio.me/certificates/cover/899AA125.jpg" target="_blank">
-    <img src="https://hermes.dio.me/certificates/cover/899AA125.jpg" alt="Certificado onboarding: Conhecendo a formação ChatGPT for Devs" width="270px" />
-</a>
-
-               </div>
-            </div>
-
-            <div class="view-more">
-                <h3>View more</h3>
+                <div>
+                    <a href="https://www.dio.me/users/ronebragagliasso">
+                        <img src="https://github.com/Hadryanpaulo/Hadryanpaulo/raw/b55de4628a36eaad43f0edc2709993529ae48b37/dio.me.jpeg" alt="DIO Logo" width="70">
+                    </a>
+                </div>
+                <hr />
+                <div class="hard-skills">
+                    <h2>Hard-Skills</h2>
+                    <a href="https://www.python.org/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://img.icons8.com/fluency/256/python.png" alt="python image" />
+                            <div class="name_skill">Python</div>
+                        </div>
+                    </a>
+                    <a href="https://pandas.pydata.org/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://www.alura.com.br/assets/api/cursos/512/introducao-python-pandas.png" alt="Pandas image" />
+                            <div class="name_skill">Pandas</div>
+                        </div>
+                    </a>
+                    <a href="https://scikit-learn.org/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" alt="scikit image" />
+                            <div class="name_skill">Scikit learn</div>
+                        </div>
+                    </a>
+                    <a href="https://www.tensorflow.org/?hl=pt-br" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png" alt="tensorflow image" />
+                            <div class="name_skill">TensorFlow</div>
+                        </div>
+                    </a>
+                    <a href="https://www.anaconda.com/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://hisuiblog.com/wp-content/uploads/2022/06/icons8-anaconda-240.png" alt="Anaconda image" />
+                            <div class="name_skill">Anaconda</div>
+                        </div>
+                    </a>
+                    <a href="https://matplotlib.org/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/1200px-Matplotlib_icon.svg.png" alt="Matplotlib image" />
+                            <div class="name_skill">Matplotlib</div>
+                        </div>
+                    </a>
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://img.icons8.com/color/256/javascript--v1.png" alt="javascript image" />
+                            <div class="name_skill">JavaScript</div>
+                        </div>
+                    </a>
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://img.icons8.com/color/256/html-5.png" alt="html image" />
+                            <div class="name_skill">HTML5</div>
+                        </div>
+                    </a>
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://img.icons8.com/color/256/css3.png" alt="css image" />
+                            <div class="name_skill">CSS3</div>
+                        </div>
+                    </a>
+                    <a href="https://www.mysql.com/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://img.icons8.com/color/256/my-sql.png" alt="mysql image" />
+                            <div class="name_skill">MySQL</div>
+                        </div>
+                    </a>
+                    <a href="https://www.postgresql.org/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL image" />
+                            <div class="name_skill">PostgreSQL</div>
+                        </div>
+                    </a>
+                    <a href="https://git-scm.com/" target="_blank">
+                        <div class="hard-skills-image">
+                            <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/git_93585.png" alt="Git image" />
+                            <div class="name_skill">Git</div>
+                        </div>
+                    </a>
+                </div>
+                <br />
+                <hr />
+                <div>
+                   <h2 id="certificados">Most relevant certificates</h2>
+                   <div class="certificados">
+                      <a href="https://hermes.dio.me/certificates/cover/63794AD8.jpg" target="_blank">
+                          <img src="https://hermes.dio.me/certificates/cover/63794AD8.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
+                      </a>
+                      <a href="https://conquerplus.com.br/certificates/4684e5c3-74b3-4c7d-b843-a2f55d9dfed2" target="_blank">
+                          <img src="https://drive.conqueronline.com.br/Certificados/Intelig%C3%AAncia%20Artificial:%20eleve%20sua%20produtividade%20e%20acelere%20sua%20carreira/1719270973714-e6665b0b-954f-4a81-8d38-d2ff61f1630e.jpeg" alt="Certificado inteligência artificial" width="270px" />
+                      </a>
+                      <a href="https://www.dio.me/certificate/YKPL9NLP/share" target="_blank">
+                          <img src="https://hermes.dio.me/certificates/cover/YKPL9NLP.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
+                      </a>
+                      <a href="https://www.dio.me/certificate/0C19CA48/share" target="_blank">
+                          <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado Formação Cybersecurity Specialist" width="270px" />
+                      </a>
+                      <a href="https://hermes.dio.me/certificates/cover/899AA125.jpg" target="_blank">
+                          <img src="https://hermes.dio.me/certificates/cover/899AA125.jpg" alt="Certificado onboarding: Conhecendo a formação ChatGPT for Devs" width="270px" />
+                      </a>
+                   </div>
+                </div>
+                <div class="view-more">
+                    <h3>View more</h3>
+                </div>
             </div>
         </div>
     </section>
 </body>
 </html>
-
