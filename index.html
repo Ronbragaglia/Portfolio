@@ -1,147 +1,210 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rone Bragaglia - Portfólio</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/4228/4228171.png"
+      type="image/x-icon"
+      style="border-radius: 100%;"
+    />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+        .view-more {
             text-align: center;
+            margin-top: 20px;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+        .certificados a {
+            display: inline-block;
+            margin: 10px;
+            transition: transform 0.3s;
         }
-        .profile {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .profile h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .profile h2 {
-            font-size: 1.5em;
-            margin: 0;
-            color: #666;
-        }
-        .profile p {
-            font-size: 1em;
-            color: #777;
-        }
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .section h3 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-        .section p {
-            font-size: 1em;
-            color: #555;
-        }
-        .section a {
-            color: #333;
-            text-decoration: none;
-        }
-        .section a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+        
+        .certificados a:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="profile">
-                <h1>Rone Bragaglia 🧠🧑‍💻</h1>
-                <h2>Artificial Intelligence Specialist | Systems Analyst & Developer | Python | Deep Learning | Machine Learning & Computer Vision</h2>
-                <p>Santo André, São Paulo, Brasil</p>
-            </div>
-        </div>
+        <a href="#">About me</a>
+        <a href="#certificados">Certificates</a>
+        <a href="#projetos">Projects</a>
     </header>
 
-    <div class="container">
-        <section class="section">
-            <h3>Sobre Mim</h3>
-            <p>Olá! Meu nome é Rone Bragaglia, e sou um entusiasta apaixonado por tecnologia e inovação. Possuo formação em Análise e Desenvolvimento de Sistemas, complementada por uma pós-graduação em Inteligência Artificial e Aprendizado de Máquina. Ao longo da minha carreira, tenho me dedicado ao desenvolvimento prático de algoritmos em áreas como machine learning, deep learning e processamento de linguagem natural.</p>
-            <p>Minhas habilidades técnicas abrangem:</p>
-            <ul>
-                <li>Machine Learning: Especialização em modelagem e otimização de algoritmos para insights poderosos.</li>
-                <li>Deep Learning: Experiência comprovada no desenvolvimento de redes neurais profundas para resolver problemas complexos.</li>
-                <li>Processamento de Linguagem Natural: Proficiência em análise de texto e tradução automática para melhorar a comunicação humana.</li>
-                <li>Desenvolvimento de Software: Domínio de Python para criar soluções eficientes e escaláveis.</li>
-                <li>Análise de Dados: Especialização em limpeza, visualização e interpretação de dados para insights estratégicos.</li>
-            </ul>
-            <p>Meu portfólio destaca projetos significativos, como modelos preditivos que influenciaram decisões estratégicas, sistemas de recomendação que aumentaram a retenção de clientes e chatbots que otimizaram a experiência do usuário. Mantenho-me atualizado com as últimas tendências e avanços tecnológicos para garantir que minhas habilidades estejam alinhadas com as demandas do mercado.</p>
-            <p>🤝 Estou animado para contribuir em projetos desafiadores que impulsionem a inovação e a excelência tecnológica. Entre em contato pelo telefone +5511954092078 ou por e-mail em <a href="mailto:rone.bragaglia@uni9.edu.br">rone.bragaglia@uni9.edu.br</a>. Para conhecer mais sobre meu trabalho, confira meu <a href="https://github.com/Ronbragaglia" target="_blank">GitHub</a> e meu <a href="https://ronbragaglia.github.io/Portfolio" target="_blank">portfólio online</a>.</p>
-        </section>
+    <section>
+        <div>
+            <h1 id="sobre">Welcome to the portfolio</h1>
 
-        <section class="section">
-            <h3>Formação</h3>
-            <p><strong>UNINOVE</strong> - Pós-graduação Lato Sensu - MBA especialização, Inteligência Artificial e Aprendizado de Máquinas<br>
-            set de 2023 - set de 2024</p>
-            <p><strong>UNINOVE</strong> - Graduação, Análise e Desenvolvimento de Sistemas<br>
-            set de 2020 - mai de 2023</p>
-        </section>
+            <hr/>
+            <br>
 
-        <section class="section">
-            <h3>Certificações</h3>
-            <p><strong>Escola Conquer</strong> - Inteligência Artificial<br>
-            Verificação emitida em jun de 2024</p>
-            <p><strong>DIO</strong> - Formação Machine Learning<br>
-            Verificação emitida em mai de 2024</p>
-            <p><strong>Alura</strong> - Imersão Inteligência Artificial<br>
-            Verificação emitida em mai de 2024</p>
-        </section>
+            <h2>Presentation</h2>
+            <p>
+                Hello, my name is Rone Bragaglia, and I am an AI engineer.
+                <br>   
+                <br>       
+                I began my journey as a programmer in 2019, and since then, I have kept myself updated with the latest trends and technologies in the field through studies in courses, bootcamps, networking, and self-directed learning. My goal is always to expand my knowledge and skills to become a more competent professional.
+                <br>
+                <br>
+                <br>Ambassador of the Dio platform and am looking for new opportunities and challenges to further grow in the field.
+                <br>
+                On this website, you can explore some of my key technical skills and my most relevant projects in the development field. I'm very pleased with your visit and hope you find useful information about my work. If you can't find what you're looking for, please feel free to access my contact information below. I'm here to assist you and answer any questions you may have. ❤☕
+            </p>
 
-        <section class="section">
-            <h3>Projetos</h3>
+            <br>
+
+            <a href="https://github.com/Ronbragaglia" target="_blank">
+                <img
+                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                    alt="github image"
+                    height="30px"
+                    width="80px"
+                />
+            </a>
+            <a href="https://www.linkedin.com/in/rone-bragaglia-a6aa60157" target="_blank">
+                <img
+                    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                    alt="image linkedin"
+                    height="30px"
+                    width="98px"
+                />
+            </a>
+
             <div>
-                <h4>Palindrome</h4>
-                <p>Função em Python que verifica se uma palavra é um palíndromo. Um palíndromo é uma palavra que é lida da mesma forma de trás para frente.</p>
-                <a href="https://colab.research.google.com/drive/1idMJinhHEujjOCjv_9IJgu9RIHAznF1N?usp=sharing" target="_blank">Repositório</a>
+                <a href="https://www.dio.me/users/ronebragagliasso">
+                    <img src="https://github.com/Hadryanpaulo/Hadryanpaulo/raw/b55de4628a36eaad43f0edc2709993529ae48b37/dio.me.jpeg" alt="DIO Logo" width="70">
+                </a>
             </div>
+
+            <hr />
+
+            <div class="hard-skills">
+                <h2>Hard-Skills</h2>
+
+                <a href="https://www.python.org/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://img.icons8.com/fluency/256/python.png" alt="python image" />
+                        <div class="name_skill">Python</div>
+                    </div>
+                </a>
+
+                <a href="https://pandas.pydata.org/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://www.alura.com.br/assets/api/cursos/512/introducao-python-pandas.png" alt="Pandas image" />
+                        <div class="name_skill">Pandas</div>
+                    </div>
+                </a>
+
+                <a href="https://scikit-learn.org/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" alt="scikit image" />
+                        <div class="name_skill">Scikit learn</div>
+                    </div>
+                </a>
+
+                <a href="https://www.tensorflow.org/?hl=pt-br" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png" alt="tensorflow image" />
+                        <div class="name_skill">TensorFlow</div>
+                    </div>
+                </a>
+
+                <a href="https://www.anaconda.com/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://hisuiblog.com/wp-content/uploads/2022/06/icons8-anaconda-240.png" alt="Anaconda image" />
+                        <div class="name_skill">Anaconda</div>
+                    </div>
+                </a>
+
+                <a href="https://matplotlib.org/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/1200px-Matplotlib_icon.svg.png" alt="Matplotlib image" />
+                        <div class="name_skill">Matplotlib</div>
+                    </div>
+                </a>
+
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://img.icons8.com/color/256/javascript--v1.png" alt="javascript image" />
+                        <div class="name_skill">JavaScript</div>
+                    </div>
+                </a>
+
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://img.icons8.com/color/256/html-5.png" alt="html image" />
+                        <div class="name_skill">HTML5</div>
+                    </div>
+                </a>
+
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://img.icons8.com/color/256/css3.png" alt="css image" />
+                        <div class="name_skill">CSS3</div>
+                    </div>
+                </a>
+
+                <a href="https://www.mysql.com/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://img.icons8.com/color/256/my-sql.png" alt="mysql image" />
+                        <div class="name_skill">MySQL</div>
+                    </div>
+                </a>
+
+                <a href="https://www.postgresql.org/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL image" />
+                        <div class="name_skill">PostgreSQL</div>
+                    </div>
+                </a>
+
+                <a href="https://git-scm.com/" target="_blank">
+                    <div class="hard-skills-image">
+                        <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/git_93585.png" alt="Git image" />
+                        <div class="name_skill">Git</div>
+                    </div>
+                </a>
+            </div>
+
+            <br />
+            <hr />
+
             <div>
-                <h4>Password Validation</h4>
-                <p>Módulo em Python que valida se uma senha é forte ou suficiente. Uma senha é considerada forte se tiver pelo menos oito caracteres, contendo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.</p>
-                <a href="https://colab.research.google.com/drive/1_4Ey-J_jfq_A6BNkcEi0jibcvhWwr9k3?usp=sharing" target="_blank">Repositório</a>
+               <h2 id="certificados">Most relevant certificates</h2>
+               <div class="certificados">
+          <a href="https://hermes.dio.me/certificates/cover/63794AD8.jpg" target="_blank">
+    <img src="https://hermes.dio.me/certificates/cover/63794AD8.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
+</a>
+
+<a href="https://conquerplus.com.br/certificates/4684e5c3-74b3-4c7d-b843-a2f55d9dfed2" target="_blank">
+    <img src="https://drive.conqueronline.com.br/Certificados/Intelig%C3%AAncia%20Artificial:%20eleve%20sua%20produtividade%20e%20acelere%20sua%20carreira/1719270973714-e6665b0b-954f-4a81-8d38-d2ff61f1630e.jpeg" alt="Certificado inteligência artificial" width="270px" />
+</a>
+
+<a href="https://www.dio.me/certificate/YKPL9NLP/share" target="_blank">
+    <img src="https://hermes.dio.me/certificates/cover/YKPL9NLP.jpg" alt="Certificado de modelos de inteligência artificial para IoT" width="270px" />
+</a>
+
+<a href="https://www.dio.me/certificate/0C19CA48/share" target="_blank">
+    <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado Formação Cybersecurity Specialist" width="270px" />
+</a>
+
+<a href="https://hermes.dio.me/certificates/cover/899AA125.jpg" target="_blank">
+    <img src="https://hermes.dio.me/certificates/cover/899AA125.jpg" alt="Certificado onboarding: Conhecendo a formação ChatGPT for Devs" width="270px" />
+</a>
+
+               </div>
             </div>
-            <div>
-                <h4>Game "Rock, Paper, Scissors, Lizard, Spock"</h4>
-                <p>Programa de jogo onde o usuário escolhe um elemento e o computador escolhe outro. O programa determina o vencedor com base nas regras do jogo.</p>
-                <a href="https://colab.research.google.com/drive/1RbIIrCOKNooQf1GUPs5fyrWSF25KHA8-?usp=sharing" target="_blank">Repositório</a>
+
+            <div class="view-more">
+                <h3>View more</h3>
             </div>
-            <div>
-                <h4>Word Count</h4>
-                <p>Programa em Python que lê um arquivo .TXT e conta o número de palavras no arquivo de texto.</p>
-                <a href="https://colab.research.google.com/drive/1kRFp-8mRiuaFt5gPsIn6xqM3MEl40bzf?usp=sharing" target="_blank">Repositório</a>
-            </div>
-            <div>
-                <h4>Project in Python Machine Learning: Survivor Passengers of the Titanic</h4>
-                <p>Predição se um passageiro do Titanic sobreviveu ao desastre com base em informações como idade, gênero, classe socioeconômica, número de parentes a bordo, entre outros dados disponíveis. É um problema de classificação binária onde o aprendizado de máquina é usado para criar um modelo capaz de fazer essa predição.</p>
-                <a href="https://colab.research.google.com/drive/1BhI9Sj13263wkPXvPz1XL7-1FwdGivXJ?usp=sharing" target="_blank">Repositório</a>
-            </div>
-        </section>
+        </div>
+    </section>
+</body>
+</html>
+
