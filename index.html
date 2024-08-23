@@ -67,6 +67,7 @@
             text-decoration: underline;
         }
 
+        /* Animação de Partículas */
         .background-animation {
             position: absolute;
             top: 0;
@@ -74,19 +75,43 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: url('https://cdn.pixabay.com/photo/2016/11/21/16/48/abstract-1845805_960_720.jpg') no-repeat center center fixed;
-            background-size: cover;
-            animation: animateBackground 30s linear infinite;
+            background: #000;
         }
 
-        @keyframes animateBackground {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Configuração das partículas */
+        @keyframes moveParticles {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
         }
     </style>
 </head>
 <body>
-    <div class="background-animation"></div>
+    <div class="background-animation">
+        <div class="particles">
+            <!-- Partículas animadas -->
+            <div class="particle" style="width: 10px; height: 10px; top: 20%; left: 30%; animation: moveParticles 5s linear infinite;"></div>
+            <div class="particle" style="width: 15px; height: 15px; top: 50%; left: 60%; animation: moveParticles 7s linear infinite;"></div>
+            <div class="particle" style="width: 8px; height: 8px; top: 10%; left: 80%; animation: moveParticles 6s linear infinite;"></div>
+            <div class="particle" style="width: 12px; height: 12px; top: 70%; left: 40%; animation: moveParticles 8s linear infinite;"></div>
+            <!-- Adicione mais partículas conforme necessário -->
+        </div>
+    </div>
     <div class="container">
         <h1>Portfólio de Inteligência Artificial</h1>
         <h2>Meus Projetos</h2>
@@ -118,8 +143,7 @@
     </div>
 </body>
 </html>
-      
-                   
-                    
-               
-                    
+       
+            
+        
+
