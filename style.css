@@ -165,8 +165,9 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(31, 0, 104, 0.7);
     margin-bottom: 10px;
-    width: 100%;
-    height: auto;
+    width: 100%;  /* Ajusta a largura da imagem ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Impede que a imagem ultrapasse o limite do contêiner */
 }
 
 .projeto h3, .projeto small {
@@ -196,5 +197,9 @@ footer {
 @media (max-width: 700px) {
     section {
         width: 90%;
+    }
+
+    .projeto picture img {
+        width: 100%; /* Ajuste para a imagem ocupar 100% da largura do contêiner em telas pequenas */
     }
 }
