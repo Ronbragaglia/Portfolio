@@ -300,83 +300,56 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title"><span class="gradient-text">Projetos em Destaque</span></h2>
-            <div class="projects-grid">
-                <article class="project-card project-featured">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background:linear-gradient(135deg,#7C3AED,#ec4899)">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>CobrancaAuto</h3>
-                            <span class="badge-production">Em Producao</span>
-                        </div>
-                        <p class="project-description">
-                            SaaS multi-tenant que automatiza cobranças via WhatsApp + Stripe para PMEs brasileiras. Dashboard completo, regua de cobranca inteligente, IA Maya para recuperacao de inadimplentes e checkout 1-click.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel 11</span>
-                            <span class="tag">React 18</span>
-                            <span class="tag">WhatsApp API</span>
-                            <span class="tag">Stripe</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
-                                <i class="fas fa-external-link-alt"></i> Ver Site
-                            </a>
-                            <a href="https://github.com/Ronbragaglia/Cobranca-auto" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <i class="fab fa-github"></i> Repositorio
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <h2 class="section-title"><span class="gradient-text">Projetos</span></h2>
 
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder"><i class="fas fa-robot"></i></div>
+            <!-- Featured: CobrancaAuto -->
+            <article class="project-card project-featured">
+                <div class="project-image">
+                    <div class="project-placeholder" style="background:linear-gradient(135deg,#7C3AED,#ec4899)">
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <div class="project-content">
-                        <h3>Word Embedding e Word2Vec</h3>
-                        <p class="project-description">
-                            Analise de sentimentos em mensagens usando NLP. Calcula sentimentos e fornece visualizacoes interativas para analise de texto em portugues.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Machine Learning</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Ronbragaglia/Word-Embedding-e-Word2Vec" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <i class="fab fa-github"></i> Ver Repositorio
-                            </a>
-                        </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>CobrancaAuto</h3>
+                        <span class="badge-production">Em Producao</span>
                     </div>
-                </article>
+                    <p class="project-description">
+                        SaaS multi-tenant que automatiza cobranças via WhatsApp + Stripe para PMEs brasileiras. Dashboard completo, regua de cobranca inteligente, IA Maya para recuperacao de inadimplentes e checkout 1-click.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel 11</span>
+                        <span class="tag">React 18</span>
+                        <span class="tag">WhatsApp API</span>
+                        <span class="tag">Stripe</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                            <i class="fas fa-external-link-alt"></i> Ver Site
+                        </a>
+                        <a href="https://github.com/Ronbragaglia/Cobranca-auto" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> Repositorio
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder"><i class="fas fa-brain"></i></div>
-                    </div>
-                    <div class="project-content">
-                        <h3>MNIST — CNN Classifier</h3>
-                        <p class="project-description">
-                            Classificacao de digitos manuscritos usando redes neurais convolucionais. Treinado com 60k imagens, 10k de teste, alta accuracy em producao.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">CNN</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Ronbragaglia/-Conjunto-de-dados-MNIST" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <i class="fab fa-github"></i> Ver Repositorio
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <!-- Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="Python">Python</button>
+                <button class="filter-btn" data-filter="TypeScript">TypeScript</button>
+                <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                <button class="filter-btn" data-filter="Jupyter Notebook">Jupyter</button>
+            </div>
+
+            <!-- GitHub Repos (dynamic) -->
+            <div id="github-projects" class="projects-grid">
+                <!-- Skeletons while loading -->
+                <div class="project-card skeleton-card"><div class="skeleton sk-img"></div><div class="skeleton sk-title"></div><div class="skeleton sk-text"></div><div class="skeleton sk-text sk-short"></div></div>
+                <div class="project-card skeleton-card"><div class="skeleton sk-img"></div><div class="skeleton sk-title"></div><div class="skeleton sk-text"></div><div class="skeleton sk-text sk-short"></div></div>
+                <div class="project-card skeleton-card"><div class="skeleton sk-img"></div><div class="skeleton sk-title"></div><div class="skeleton sk-text"></div><div class="skeleton sk-text sk-short"></div></div>
             </div>
         </div>
     </section>
