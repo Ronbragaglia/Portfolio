@@ -37,7 +37,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// ===== ACTIVE NAV =====
+// ===== ACTIVE NAV + SCROLL EVENTS =====
 const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
   let current = '';
@@ -51,13 +51,22 @@ window.addEventListener('scroll', () => {
 
 // ===== TYPING ANIMATION =====
 const typedEl = document.getElementById('typed-text');
-const roles = ['ML Engineer & MLOps','Fundador do CobrancaAuto','Agentes IA Autonomos','Desenvolvedor Full Stack','Especialista em Cybersecurity'];
+const roles = [
+  'ML Engineer & MLOps',
+  'Fundador do CobrancaAuto',
+  'Agentes IA Autonomos',
+  'Desenvolvedor Full Stack',
+  'Especialista em Cybersecurity'
+];
 let ri = 0, ci = 0, deleting = false;
 function typeLoop() {
   if (!typedEl) return;
   const cur = roles[ri];
   typedEl.textContent = deleting ? cur.substring(0, ci--) : cur.substring(0, ci++);
-  if (!deleting && ci === cur.length + 1) { setTimeout(() => { deleting = true; typeLoop(); }, 2000); return; }
+  if (!deleting && ci === cur.length + 1) {
+    setTimeout(() => { deleting = true; typeLoop(); }, 2000);
+    return;
+  }
   if (deleting && ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
   setTimeout(typeLoop, deleting ? 40 : 80);
 }
@@ -89,7 +98,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.skill-category, .certificate-card, .project-card, .contact-card, .about-stats, .education-item').forEach(el => {
+document.querySelectorAll('.skill-category, .certificate-card, .contact-card, .about-stats, .education-item').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
@@ -98,3 +107,94 @@ document.querySelectorAll('.skill-category, .certificate-card, .project-card, .c
 document.getElementById('back-to-top')?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// ===== LANGUAGE COLORS =====
+const langColors = {
+  Python: '#3572A5',
+  JavaScript: '#f1e05a',
+  TypeScript: '#3178c6',
+  PHP: '#4F5D95',
+  HTML: '#e34c26',
+  CSS: '#563d7c',
+  'Jupyter Notebook': '#DA5B0B',
+  Shell: '#89e051',
+  Vue: '#41b883',
+  Ruby: '#701516',
+  Go: '#00ADD8',
+  Rust: '#dea584',
+  default: '#8b5cf6'
+};
+
+const skipRepos = ['Ronbragaglia', 'Portfolio'];
+let allRepos = [];
+
+// ===== RENDER REPO CARD =====
+function renderCard(repo) {
+  const lang = repo.language || 'Other';
+  const color = langColors[lang] || langColors.default;
+  const raw = repo.description || '';
+  const desc = raw.length > 90 ? raw.substring(0, 90) + '...' : (raw || 'Sem descricao.');
+  const name = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
+  const updated = new Date(repo.updated_at).toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' });
+  const stars = repo.stargazers_count > 0
+    ? '<span class="repo-stars"><i class="fas fa-star"></i> ' + repo.stargazers_count + '</span>'
+    : '';
+  const liveLink = repo.homepage
+    ? '<a href="' + repo.homepage + '" target="_blank" rel="noopener noreferrer" class="project-link project-link-live"><i class="fas fa-external-link-alt"></i> Demo</a>'
+    : '';
+
+  return '<article class="project-card fade-in" data-lang="' + lang + '">' +
+    '<div class="project-image"><div class="project-placeholder repo-placeholder"><i class="fab fa-github"></i></div></div>' +
+    '<div class="project-content">' +
+    '<div class="project-header"><h3 class="repo-name">' + name + '</h3>' + stars + '</div>' +
+    '<p class="project-description">' + desc + '</p>' +
+    '<div class="project-tags">' +
+    '<span class="tag tag-lang" style="background:' + color + '22;color:' + color + ';border:1px solid ' + color + '44">' +
+    '<span class="lang-dot" style="background:' + color + '"></span>' + lang + '</span>' +
+    '<span class="tag tag-date"><i class="fas fa-clock"></i> ' + updated + '</span>' +
+    '</div>' +
+    '<div class="project-links">' + liveLink +
+    '<a href="' + repo.html_url + '" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Ver Codigo</a>' +
+    '</div></div></article>';
+}
+
+// ===== RENDER WITH FILTER =====
+function renderRepos(filter) {
+  const grid = document.getElementById('github-projects');
+  if (!grid) return;
+  const filtered = filter === 'all' ? allRepos : allRepos.filter(r => r.language === filter);
+  if (!filtered.length) {
+    grid.innerHTML = '<p style="color:var(--text-secondary);text-align:center;grid-column:1/-1;padding:2rem">Nenhum projeto encontrado.</p>';
+    return;
+  }
+  grid.innerHTML = filtered.map(renderCard).join('');
+  grid.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+// ===== FETCH GITHUB REPOS =====
+async function loadGithubRepos() {
+  const grid = document.getElementById('github-projects');
+  if (!grid) return;
+  try {
+    const res = await fetch('https://api.github.com/users/Ronbragaglia/repos?sort=updated&per_page=100');
+    if (!res.ok) throw new Error('API error');
+    const repos = await res.json();
+    allRepos = repos
+      .filter(r => !r.fork && !skipRepos.includes(r.name))
+      .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at) - new Date(a.updated_at));
+    renderRepos('all');
+  } catch (err) {
+    grid.innerHTML = '<p style="color:var(--text-secondary);text-align:center;grid-column:1/-1;padding:2rem">Nao foi possivel carregar os repositorios. <a href="https://github.com/Ronbragaglia" target="_blank" style="color:var(--primary)">Ver no GitHub</a></p>';
+  }
+}
+
+// ===== FILTER BUTTONS =====
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderRepos(btn.dataset.filter);
+  });
+});
+
+loadGithubRepos();

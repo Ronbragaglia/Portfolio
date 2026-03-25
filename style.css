@@ -1401,3 +1401,74 @@ button:focus-visible {
 
 /* ===== NAV LINK ACTIVE ===== */
 .nav-link.active { color: var(--primary) !important; }
+
+/* ===== PROJECT FILTERS ===== */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1.25rem;
+}
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(99,102,241,0.3);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ===== SKELETON LOADING ===== */
+.skeleton-card { pointer-events: none; }
+.skeleton {
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }
+.sk-img { height: 80px; margin-bottom: 1rem; }
+.sk-title { height: 20px; width: 70%; margin-bottom: 0.75rem; }
+.sk-text { height: 14px; margin-bottom: 0.5rem; }
+.sk-short { width: 50%; }
+
+/* ===== REPO CARDS ===== */
+.repo-placeholder { background: rgba(99,102,241,0.08); font-size: 2rem; color: var(--text-secondary); }
+.repo-name { font-size: 0.95rem; text-transform: capitalize; }
+.repo-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #ffd700;
+  font-weight: 600;
+}
+.tag-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.lang-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tag-date {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
