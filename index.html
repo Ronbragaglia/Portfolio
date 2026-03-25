@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Rone Bragaglia - Desenvolvedor Full Stack especializado em Inteligência Artificial, Machine Learning e Desenvolvimento Web. Conheça meus projetos, certificações e habilidades técnicas.">
-    <meta name="keywords" content="Rone Bragaglia, Desenvolvedor, Full Stack, Inteligência Artificial, Machine Learning, Python, JavaScript, React, Laravel, Portfolio">
+    <meta name="description" content="Portfólio de Rone Bragaglia — Fundador do CobrançaAuto, ML Engineer e Desenvolvedor Full Stack especializado em IA, MLOps e Cibersegurança.">
+    <meta name="keywords" content="Rone Bragaglia, ML Engineer, Full Stack, CobrançaAuto, Inteligência Artificial, Machine Learning, Python, React, Laravel, Portfolio">
     <meta name="author" content="Rone Bragaglia">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#6366f1">
-    
-    <!-- Open Graph / Facebook -->
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/Ronbragaglia/Portfolio/">
-    <meta property="og:title" content="Rone Bragaglia - Desenvolvedor Full Stack & AI">
-    <meta property="og:description" content="Portfólio de Rone Bragaglia - Especialista em Inteligência Artificial, Machine Learning e Desenvolvimento Web">
-    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/4228/4228171.png">
-    
-    <!-- Twitter -->
+    <meta property="og:url" content="https://ronbragaglia.github.io/Portfolio/">
+    <meta property="og:title" content="Rone Bragaglia — ML Engineer & Fundador CobrançaAuto">
+    <meta property="og:description" content="Fundador do CobrançaAuto. ML Engineer com 15+ anos em desenvolvimento, IA e Cibersegurança.">
+    <meta property="og:image" content="https://github.com/Ronbragaglia.png">
+
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Rone Bragaglia - Desenvolvedor Full Stack & AI">
-    <meta property="twitter:description" content="Portfólio de Rone Bragaglia - Especialista em Inteligência Artificial, Machine Learning e Desenvolvimento Web">
-    <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/512/4228/4228171.png">
-    
-    <title>Rone Bragaglia | Desenvolvedor Full Stack & AI</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4228/4228171.png">
-    
-    <!-- CSS -->
+    <meta property="twitter:title" content="Rone Bragaglia — ML Engineer & Fundador CobrançaAuto">
+    <meta property="twitter:description" content="Fundador do CobrançaAuto. ML Engineer com 15+ anos em desenvolvimento, IA e Cibersegurança.">
+    <meta property="twitter:image" content="https://github.com/Ronbragaglia.png">
+
+    <title>Rone Bragaglia | ML Engineer & Fundador CobrançaAuto</title>
+
+    <link rel="icon" type="image/png" href="https://github.com/Ronbragaglia.png">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Dark Mode Toggle -->
     <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
         <i class="fas fa-moon"></i>
@@ -50,19 +50,16 @@
             <a href="#hero" class="nav-logo">
                 <span class="logo-text">RB</span>
             </a>
-            
             <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-            
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">Sobre</a></li>
                 <li><a href="#skills" class="nav-link">Habilidades</a></li>
                 <li><a href="#certificates" class="nav-link">Certificados</a></li>
                 <li><a href="#projects" class="nav-link">Projetos</a></li>
                 <li><a href="#contact" class="nav-link">Contato</a></li>
+                <li><a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="nav-link nav-cta">CobrancaAuto</a></li>
             </ul>
         </div>
     </nav>
@@ -71,32 +68,37 @@
     <section id="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-greeting">Olá, eu sou</p>
+                <p class="hero-greeting">Ola, eu sou</p>
                 <h1 class="hero-title">
                     <span class="gradient-text">Rone Bragaglia</span>
                 </h1>
-                <h2 class="hero-subtitle">Desenvolvedor Full Stack & Especialista em IA</h2>
+                <h2 class="hero-subtitle">
+                    <span id="typed-text">ML Engineer &amp; MLOps</span><span class="typed-cursor">|</span>
+                </h2>
                 <p class="hero-description">
-                    Transformando ideias em soluções tecnológicas inovadoras através da Inteligência Artificial e desenvolvimento web moderno.
+                    Fundador do <strong><a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="hero-link">CobrancaAuto</a></strong> — SaaS que automatiza cobranças via WhatsApp para PMEs. 15+ anos construindo sistemas de IA, MLOps e arquiteturas escaláveis em produção.
                 </p>
+                <div class="hero-badges">
+                    <span class="hero-badge"><i class="fas fa-robot"></i> Agentes IA Autônomos</span>
+                    <span class="hero-badge"><i class="fas fa-shield-alt"></i> Cibersegurança</span>
+                    <span class="hero-badge"><i class="fas fa-medal"></i> Embaixador DIO Global</span>
+                </div>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-code"></i> Ver Projetos
+                    </a>
+                    <a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-accent">
+                        <i class="fas fa-rocket"></i> CobrancaAuto
                     </a>
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-envelope"></i> Contato
                     </a>
                 </div>
                 <div class="hero-social">
-                    <a href="https://github.com/Ronbragaglia" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rone-bragaglia-a6aa60157" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://wa.me/5511954092078" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                    <a href="https://github.com/Ronbragaglia" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rone-bragaglia-a6aa60157" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/5511954092078" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://twitter.com/ronbragaglia" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -106,8 +108,8 @@
                     <div class="shape shape-3"></div>
                 </div>
                 <div class="hero-image">
-                    <div class="avatar-placeholder">
-                        <i class="fas fa-user-astronaut"></i>
+                    <div class="avatar-wrapper">
+                        <img src="https://github.com/Ronbragaglia.png" alt="Rone Bragaglia" class="avatar-photo"/>
                     </div>
                 </div>
             </div>
@@ -121,58 +123,57 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Sobre Mim</span>
-            </h2>
+            <h2 class="section-title"><span class="gradient-text">Sobre Mim</span></h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Olá! Meu nome é <strong>Rone Bragaglia</strong> e sou apaixonado por tecnologia e inovação.
+                        Sou <strong>Rone Bragaglia</strong>, ML Engineer, Desenvolvedor Full Stack e Fundador do <strong><a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="inline-link">CobrancaAuto</a></strong> — SaaS multi-tenant que resolve inadimplencia para PMEs brasileiras via WhatsApp + Stripe.
                     </p>
                     <p>
-                        Minha jornada como desenvolvedor começou em <strong>2019</strong>, e desde então tenho me dedicado a estar sempre na vanguarda das tendências e tecnologias do campo. Através de cursos, bootcamps, networking e aprendizado autodidata, busco constantemente expandir meus conhecimentos e habilidades para me tornar um profissional mais competente e inovador.
+                        Com mais de <strong>15 anos</strong> em desenvolvimento de software, construo desde agentes IA autonomos com LangChain e Claude AI ate plataformas de producao com 10k+ predicoes/dia e 92% de accuracy. Especialista em <strong>MLOps</strong>, <strong>Ciberseguranca aplicada a ML</strong> e arquitetura Zero Trust.
                     </p>
                     <p>
-                        Sou graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> e concluí minha Pós-Graduação em <strong>Inteligência Artificial e Machine Learning</strong> na UNINOVE. Atualmente, integro soluções de Inteligência Artificial com estratégias de marketing, visando gerar impacto real nos negócios.
-                    </p>
-                    <p>
-                        Como embaixador da plataforma <strong>DIO</strong>, estou sempre buscando novas oportunidades e desafios que me permitam crescer ainda mais na área.
+                        Pos-Graduado em <strong>IA e Machine Learning</strong> e em <strong>Data Science &amp; Analytics</strong> pela UNINOVE. <strong>Embaixador DIO Global</strong> — Campus Expert Turma 11.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <span class="stat-number">7+</span>
-                            <span class="stat-label">Anos de Experiência</span>
+                            <span class="stat-number" data-target="15">15+</span>
+                            <span class="stat-label">Anos de Experiencia</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">50+</span>
+                            <span class="stat-number" data-target="50">50+</span>
                             <span class="stat-label">Projetos Completos</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Certificações</span>
+                            <span class="stat-number" data-target="20">20+</span>
+                            <span class="stat-label">Certificacoes</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-education">
-                    <h3><i class="fas fa-graduation-cap"></i> Formação</h3>
+                    <h3><i class="fas fa-graduation-cap"></i> Formacao</h3>
                     <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
+                        <div class="education-icon"><i class="fas fa-university"></i></div>
                         <div class="education-info">
-                            <h4>Pós-Graduação em IA e Machine Learning</h4>
+                            <h4>Pos-Grad. Data Science &amp; Analytics</h4>
                             <p>UNINOVE</p>
-                            <span class="education-date">2023 - 2024</span>
+                            <span class="education-date">2025 – 2026 <span class="badge-active">Em andamento</span></span>
                         </div>
                     </div>
                     <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
+                        <div class="education-icon"><i class="fas fa-brain"></i></div>
                         <div class="education-info">
-                            <h4>Análise e Desenvolvimento de Sistemas</h4>
-                            <p>Faculdade</p>
-                            <span class="education-date">2019 - 2022</span>
+                            <h4>MBA em IA e Machine Learning</h4>
+                            <p>UNINOVE</p>
+                            <span class="education-date">2023 – 2024</span>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="education-info">
+                            <h4>Analise e Desenvolvimento de Sistemas</h4>
+                            <p>UNINOVE</p>
+                            <span class="education-date">2020 – 2023</span>
                         </div>
                     </div>
                 </div>
@@ -183,100 +184,50 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Habilidades Técnicas</span>
-            </h2>
+            <h2 class="section-title"><span class="gradient-text">Habilidades Tecnicas</span></h2>
             <div class="skills-grid">
-                <!-- AI & Machine Learning -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> IA & Machine Learning</h3>
+                    <h3><i class="fas fa-brain"></i> IA &amp; Machine Learning</h3>
                     <div class="skills-list">
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/fluency/256/python.png" alt="Python">
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://www.alura.com.br/assets/api/cursos/512/introducao-python-pandas.png" alt="Pandas">
-                            <span>Pandas</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" alt="Scikit-learn">
-                            <span>Scikit-learn</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png" alt="TensorFlow">
-                            <span>TensorFlow</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://hisuiblog.com/wp-content/uploads/2022/06/icons8-anaconda-240.png" alt="Anaconda">
-                            <span>Anaconda</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/1200px-Matplotlib_icon.svg.png" alt="Matplotlib">
-                            <span>Matplotlib</span>
-                        </div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"><span>TensorFlow</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"><span>PyTorch</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"><span>Pandas</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"><span>NumPy</span></div>
+                        <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/390px-Scikit_learn_logo_small.svg.png" alt="Scikit-learn"><span>Scikit-learn</span></div>
+                        <div class="skill-item skill-badge-item"><span class="skill-badge-text" style="background:#412991">OpenAI GPT</span></div>
+                        <div class="skill-item skill-badge-item"><span class="skill-badge-text" style="background:#1C3C6E">LangChain</span></div>
+                        <div class="skill-item skill-badge-item"><span class="skill-badge-text" style="background:#D97757">Claude AI</span></div>
                     </div>
                 </div>
 
-                <!-- Web Development -->
                 <div class="skill-category">
                     <h3><i class="fas fa-code"></i> Desenvolvimento Web</h3>
                     <div class="skills-list">
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/javascript--v1.png" alt="JavaScript">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/html-5.png" alt="HTML5">
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/css3.png" alt="CSS3">
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/react-native.png" alt="React">
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/laravel.png" alt="Laravel">
-                            <span>Laravel</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/php.png" alt="PHP">
-                            <span>PHP</span>
-                        </div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"><span>Next.js</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"><span>Laravel</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"><span>FastAPI</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"><span>Tailwind CSS</span></div>
                     </div>
                 </div>
 
-                <!-- Database & Tools -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Banco de Dados & Ferramentas</h3>
+                    <h3><i class="fas fa-cloud"></i> Cloud, DevOps &amp; Seguranca</h3>
                     <div class="skills-list">
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/my-sql.png" alt="MySQL">
-                            <span>MySQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="PostgreSQL">
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/git_93585.png" alt="Git">
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/docker.png" alt="Docker">
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/visual-studio-code-2019.png" alt="VS Code">
-                            <span>VS Code</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="https://img.icons8.com/color/256/linux.png" alt="Linux">
-                            <span>Linux</span>
-                        </div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"><span>Azure</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"><span>AWS</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes"><span>Kubernetes</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"><span>Redis</span></div>
+                        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+                        <div class="skill-item skill-badge-item"><span class="skill-badge-text" style="background:#1a1b3a">Zero Trust</span></div>
                     </div>
                 </div>
             </div>
@@ -286,56 +237,59 @@
     <!-- Certificates Section -->
     <section id="certificates" class="certificates">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Certificações</span>
-            </h2>
+            <h2 class="section-title"><span class="gradient-text">Certificacoes</span></h2>
             <div class="certificates-grid">
-                <a href="https://hermes.dio.me/certificates/cover/63794AD8.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="https://hermes.dio.me/certificates/cover/63794AD8.jpg" alt="Certificado de modelos de inteligência artificial para IoT">
+                <a href="https://hermes.dio.me/certificates/Z6WAAROV.pdf" target="_blank" rel="noopener noreferrer" class="certificate-card">
+                    <div class="certificate-image cert-icon-card">
+                        <i class="fas fa-cloud cert-icon" style="color:#0078D4"></i>
                     </div>
                     <div class="certificate-info">
-                        <h3>Modelos de IA para IoT</h3>
-                        <p>Digital Innovation One</p>
+                        <h3>AI-102: IA no Microsoft Azure</h3>
+                        <p>Digital Innovation One &middot; ago 2025</p>
                     </div>
                 </a>
-
-                <a href="https://conquerplus.com.br/certificates/4684e5c3-74b3-4c7d-b843-a2f55d9dfed2" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="https://drive.conqueronline.com.br/Certificados/Intelig%C3%AAncia%20Artificial:%20eleve%20sua%20produtividade%20e%20acelere%20sua%20carreira/1719270973714-e6665b0b-954f-4a81-8d38-d2ff61f1630e.jpeg" alt="Certificado inteligência artificial">
+                <a href="https://dio.me" target="_blank" rel="noopener noreferrer" class="certificate-card">
+                    <div class="certificate-image cert-icon-card">
+                        <i class="fas fa-robot cert-icon" style="color:#FF6B35"></i>
                     </div>
                     <div class="certificate-info">
-                        <h3>IA: Produtividade e Carreira</h3>
-                        <p>Conquer Plus</p>
+                        <h3>BairesDev — ML Training</h3>
+                        <p>Digital Innovation One &middot; ago 2025</p>
                     </div>
                 </a>
-
-                <a href="https://www.dio.me/certificate/YKPL9NLP/share" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="https://hermes.dio.me/certificates/cover/YKPL9NLP.jpg" alt="Certificado de modelos de inteligência artificial para IoT">
+                <a href="https://dio.me" target="_blank" rel="noopener noreferrer" class="certificate-card">
+                    <div class="certificate-image cert-icon-card">
+                        <i class="fas fa-cloud-sun cert-icon" style="color:#4FC3F7"></i>
                     </div>
                     <div class="certificate-info">
-                        <h3>Modelos de IA para IoT</h3>
-                        <p>Digital Innovation One</p>
+                        <h3>Cloud com IA — XP Inc.</h3>
+                        <p>Digital Innovation One &middot; set 2025</p>
                     </div>
                 </a>
-
+                <a href="https://dio.me" target="_blank" rel="noopener noreferrer" class="certificate-card">
+                    <div class="certificate-image cert-icon-card">
+                        <i class="fas fa-star cert-icon" style="color:#FFD700"></i>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Campus Expert — Embaixador Global</h3>
+                        <p>Digital Innovation One &middot; abr 2025</p>
+                    </div>
+                </a>
+                <a href="https://app.rocketseat.com.br/certificates/ace90127-dbcb-462f-80c0-d7c2a0362f78" target="_blank" rel="noopener noreferrer" class="certificate-card">
+                    <div class="certificate-image cert-icon-card">
+                        <i class="fas fa-rocket cert-icon" style="color:#8257E5"></i>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>IA na Pratica</h3>
+                        <p>Rocketseat &middot; ago 2024</p>
+                    </div>
+                </a>
                 <a href="https://www.dio.me/certificate/0C19CA48/share" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="https://hermes.dio.me/certificates/cover/0C19CA48.jpg" alt="Certificado Formação Cybersecurity Specialist">
+                    <div class="certificate-image cert-icon-card">
+                        <i class="fas fa-shield-alt cert-icon" style="color:#E53935"></i>
                     </div>
                     <div class="certificate-info">
                         <h3>Cybersecurity Specialist</h3>
-                        <p>Digital Innovation One</p>
-                    </div>
-                </a>
-
-                <a href="https://hermes.dio.me/certificates/cover/899AA125.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="https://hermes.dio.me/certificates/cover/899AA125.jpg" alt="Certificado onboarding: Conhecendo a formação ChatGPT for Devs">
-                    </div>
-                    <div class="certificate-info">
-                        <h3>ChatGPT for Devs</h3>
                         <p>Digital Innovation One</p>
                     </div>
                 </a>
@@ -346,73 +300,81 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Projetos Recentes</span>
-            </h2>
+            <h2 class="section-title"><span class="gradient-text">Projetos em Destaque</span></h2>
             <div class="projects-grid">
+                <article class="project-card project-featured">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background:linear-gradient(135deg,#7C3AED,#ec4899)">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>CobrancaAuto</h3>
+                            <span class="badge-production">Em Producao</span>
+                        </div>
+                        <p class="project-description">
+                            SaaS multi-tenant que automatiza cobranças via WhatsApp + Stripe para PMEs brasileiras. Dashboard completo, regua de cobranca inteligente, IA Maya para recuperacao de inadimplentes e checkout 1-click.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel 11</span>
+                            <span class="tag">React 18</span>
+                            <span class="tag">WhatsApp API</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                                <i class="fas fa-external-link-alt"></i> Ver Site
+                            </a>
+                            <a href="https://github.com/Ronbragaglia/Cobranca-auto" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> Repositorio
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-robot"></i>
-                        </div>
+                        <div class="project-placeholder"><i class="fas fa-robot"></i></div>
                     </div>
                     <div class="project-content">
                         <h3>Word Embedding e Word2Vec</h3>
                         <p class="project-description">
-                            Análise de sentimentos em mensagens usando técnicas de processamento de linguagem natural. O código calcula sentimentos e fornece visualizações que tornam a análise mais compreensível e visualmente atraente.
+                            Analise de sentimentos em mensagens usando NLP. Calcula sentimentos e fornece visualizacoes interativas para analise de texto em portugues.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">NLP</span>
                             <span class="tag">Machine Learning</span>
                         </div>
-                        <a href="https://github.com/Ronbragaglia/Word-Embedding-e-Word2Vec" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <i class="fab fa-github"></i> Ver Repositório
-                        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/Ronbragaglia/Word-Embedding-e-Word2Vec" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> Ver Repositorio
+                            </a>
+                        </div>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-database"></i>
-                        </div>
+                        <div class="project-placeholder"><i class="fas fa-brain"></i></div>
                     </div>
                     <div class="project-content">
-                        <h3>MNIST Dataset</h3>
+                        <h3>MNIST — CNN Classifier</h3>
                         <p class="project-description">
-                            Classificação de dígitos manuscritos usando redes neurais convolucionais. O modelo foi treinado e avaliado usando 60.000 imagens de treinamento e 10.000 imagens de teste.
+                            Classificacao de digitos manuscritos usando redes neurais convolucionais. Treinado com 60k imagens, 10k de teste, alta accuracy em producao.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">TensorFlow</span>
                             <span class="tag">CNN</span>
                         </div>
-                        <a href="https://github.com/Ronbragaglia/-Conjunto-de-dados-MNIST" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <i class="fab fa-github"></i> Ver Repositório
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-comments"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/Ronbragaglia/-Conjunto-de-dados-MNIST" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> Ver Repositorio
+                            </a>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sistema de Cobrança Automatizada</h3>
-                        <p class="project-description">
-                            Sistema completo de gestão de cobranças com automação via WhatsApp, integração com gateways de pagamento e dashboard administrativo.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">React</span>
-                            <span class="tag">WhatsApp API</span>
-                        </div>
-                        <a href="https://github.com/Ronbragaglia/Cobranca-auto" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <i class="fab fa-github"></i> Ver Repositório
-                        </a>
                     </div>
                 </article>
             </div>
@@ -422,69 +384,44 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Entre em Contato</span>
-            </h2>
+            <h2 class="section-title"><span class="gradient-text">Entre em Contato</span></h2>
             <p class="contact-description">
-                Se você gostaria de se conectar comigo ou discutir possíveis colaborações, sinta-se à vontade para usar qualquer uma das plataformas abaixo:
+                Aberto a colaboracoes, consultoria e projetos desafiadores. Escolha a plataforma de sua preferencia:
             </p>
             <div class="contact-links">
+                <a href="https://cobrancaauto.com.br" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-featured">
+                    <div class="contact-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="contact-info"><h3>CobrancaAuto</h3><p>cobrancaauto.com.br</p></div>
+                </a>
                 <a href="https://github.com/Ronbragaglia" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>GitHub</h3>
-                        <p>@Ronbragaglia</p>
-                    </div>
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-info"><h3>GitHub</h3><p>@Ronbragaglia</p></div>
                 </a>
-
-                <a href="https://wa.me/5511954092078" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>WhatsApp</h3>
-                        <p>+55 11 95409-2078</p>
-                    </div>
-                </a>
-
                 <a href="https://www.linkedin.com/in/rone-bragaglia-a6aa60157" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>LinkedIn</h3>
-                        <p>Rone Bragaglia</p>
-                    </div>
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-info"><h3>LinkedIn</h3><p>Rone Bragaglia</p></div>
                 </a>
-
+                <a href="https://wa.me/5511954092078" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-info"><h3>WhatsApp</h3><p>+55 11 95409-2078</p></div>
+                </a>
                 <a href="https://www.dio.me/users/ronebragagliasso" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="contact-info">
-                        <h3>DIO</h3>
-                        <p>Perfil DIO</p>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-code"></i></div>
+                    <div class="contact-info"><h3>DIO</h3><p>Embaixador Global</p></div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2026 Rone Bragaglia. Todos os direitos reservados.</p>
-                <p>Desenvolvido com <i class="fas fa-heart"></i> e muito café ☕</p>
+                <p>Desenvolvido com <i class="fas fa-heart"></i> e muito cafe</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
-
-       
