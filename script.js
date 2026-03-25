@@ -128,12 +128,23 @@ const langColors = {
 const skipRepos = ['Ronbragaglia', 'Portfolio'];
 let allRepos = [];
 
+// ===== FALLBACK DESCRIPTIONS =====
+const repoDesc = {
+  'Cobranca-auto': 'SaaS multi-tenant de cobranças automáticas via WhatsApp + Stripe para PMEs. Em produção.',
+  'assistente_com-banco': 'Assistente de IA com memória persistente integrado a banco de dados SQL via LangChain.',
+  'Azure-Voice-Language-Lab': 'Lab de reconhecimento de voz e análise de linguagem natural com Azure AI Services.',
+  'code-generator-ai': 'Gerador de código com IA generativa — prompt → código pronto com explicação.',
+  'Assistente-de-Voz-Inteligente': 'Assistente de voz com NLP, reconhecimento de intenções e respostas contextuais.',
+  'DocuGen-AI': 'Gerador automático de documentos técnicos e relatórios usando LLMs.',
+  'Automação-de-Busca-de-Empregos': 'Bot que automatiza busca, filtragem e candidatura a vagas com scraping + IA.',
+};
+
 // ===== RENDER REPO CARD =====
 function renderCard(repo) {
   const lang = repo.language || 'Other';
   const color = langColors[lang] || langColors.default;
-  const raw = repo.description || '';
-  const desc = raw.length > 90 ? raw.substring(0, 90) + '...' : (raw || 'Sem descricao.');
+  const raw = repo.description || repoDesc[repo.name] || '';
+  const desc = raw.length > 90 ? raw.substring(0, 90) + '...' : (raw || 'Projeto open source — acesse o repositório para mais detalhes.');
   const name = repo.name.replace(/-/g, ' ').replace(/_/g, ' ');
   const updated = new Date(repo.updated_at).toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' });
   const stars = repo.stargazers_count > 0

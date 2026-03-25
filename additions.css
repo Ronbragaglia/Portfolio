@@ -216,3 +216,53 @@
 
 /* ===== NAV LINK ACTIVE ===== */
 .nav-link.active { color: var(--primary) !important; }
+
+/* ===== METRICS BAR ===== */
+.metrics-bar {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: rgba(99,102,241,0.04);
+}
+.metrics-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  gap: 0.2rem;
+}
+.metric-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.metric-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.metric-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+}
+@media (max-width: 600px) {
+  .metric-divider { display: none; }
+  .metric-item { padding: 0.5rem 1.2rem; }
+}
+
+/* ===== AVATAR LARGER ===== */
+.avatar-wrapper { width: 260px; height: 260px; }
