@@ -1,0 +1,218 @@
+
+/* ===== SCROLL PROGRESS BAR ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: var(--secondary); transform: translateY(-3px); }
+
+/* ===== NAVBAR CTA & SCROLLED ===== */
+.nav-cta {
+  background: var(--primary);
+  color: white !important;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-cta:hover { background: var(--secondary) !important; transform: scale(1.05); }
+.navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+
+/* ===== TYPING CURSOR ===== */
+.typed-cursor {
+  display: inline-block;
+  animation: blink 0.8s step-end infinite;
+  color: var(--primary);
+  font-weight: 300;
+  margin-left: 2px;
+}
+@keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0 } }
+
+/* ===== HERO BADGES ===== */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.3);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.hero-badge i { color: var(--primary); font-size: 0.7rem; }
+
+/* ===== HERO LINK ===== */
+.hero-link, .inline-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.hero-link:hover, .inline-link:hover { border-bottom-color: var(--primary); }
+
+/* ===== BTN ACCENT ===== */
+.btn-accent {
+  background: linear-gradient(135deg, #7C3AED, #ec4899);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-accent:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(124,58,237,0.4); }
+
+/* ===== AVATAR PHOTO ===== */
+.avatar-wrapper {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 40px rgba(99,102,241,0.3);
+}
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg-primary);
+}
+
+/* ===== EDUCATION BADGE ACTIVE ===== */
+.badge-active {
+  display: inline-block;
+  background: rgba(16,185,129,0.15);
+  color: #10b981;
+  border: 1px solid rgba(16,185,129,0.3);
+  font-size: 0.65rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ===== SKILL FA ITEMS (OpenAI/LangChain/Claude/ZeroTrust) ===== */
+.skill-fa-item i {
+  font-size: 1.6rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ===== FOOTER COMPACT ===== */
+.footer { padding: 1rem 0 !important; }
+.footer-content { padding: 0 !important; }
+.footer-content p {
+  font-size: 0.78rem !important;
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
+  opacity: 0.6;
+}
+.footer-content p i { font-size: 0.7rem; color: #ec4899; }
+
+/* ===== CERT ICON CARDS ===== */
+.cert-icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99,102,241,0.05);
+  min-height: 80px;
+}
+.cert-icon { font-size: 2.5rem; }
+
+/* ===== PROJECT FEATURED ===== */
+.project-featured {
+  border: 1px solid rgba(124,58,237,0.4);
+  box-shadow: 0 0 30px rgba(124,58,237,0.15);
+}
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.badge-production {
+  background: rgba(16,185,129,0.15);
+  color: #10b981;
+  border: 1px solid rgba(16,185,129,0.35);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.project-links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
+.project-link-live {
+  background: linear-gradient(135deg, #7C3AED, #ec4899);
+  color: white !important;
+  border-color: transparent !important;
+}
+.project-link-live:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* ===== CONTACT FEATURED CARD ===== */
+.contact-card-featured {
+  border-color: rgba(124,58,237,0.5) !important;
+  background: rgba(124,58,237,0.08) !important;
+}
+.contact-card-featured .contact-icon { color: var(--primary); }
+
+/* ===== FADE IN ANIMATIONS ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== NAV LINK ACTIVE ===== */
+.nav-link.active { color: var(--primary) !important; }
