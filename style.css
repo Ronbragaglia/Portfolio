@@ -1472,3 +1472,187 @@ button:focus-visible {
   align-items: center;
   gap: 0.25rem;
 }
+
+/* ============================================================
+   2026 REDESIGN — Fundador / Senior Engineer
+   Dot grid background + Glassmorphism + Professional palette
+   ============================================================ */
+
+/* --- Palette Override --- */
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #6366f1;
+  --accent: #818cf8;
+  --bg-primary: #04040a;
+  --bg-secondary: #08080f;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.07);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --glow: rgba(99, 102, 241, 0.2);
+}
+
+/* --- Dot Grid Background --- */
+body {
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Fade dot grid near top (hero area) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 400px;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Remove blob shapes --- */
+.floating-shapes { display: none; }
+
+/* --- Section backgrounds — flat dark, no gradient --- */
+.about, .skills, .certificates, .projects, .contact { background: transparent; }
+section:nth-child(even) { background: transparent; }
+
+/* --- Glassmorphism Cards --- */
+.project-card,
+.certificate-card,
+.contact-card,
+.skill-category {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: none !important;
+  transition: border-color 0.25s, transform 0.25s, background 0.25s;
+}
+
+.project-card:hover,
+.certificate-card:hover,
+.contact-card:hover,
+.skill-category:hover {
+  background: rgba(99, 102, 241, 0.06) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* --- Featured card — subtle indigo border only --- */
+.project-featured {
+  background: rgba(99, 102, 241, 0.05) !important;
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* --- Gradient text — remove pink, use indigo-blue --- */
+.gradient-text {
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Hero: remove neon glow, clean look --- */
+#hero {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Navbar: glass effect --- */
+.navbar {
+  background: rgba(4, 4, 10, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.navbar.scrolled {
+  border-bottom-color: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 1px 0 rgba(99, 102, 241, 0.1);
+}
+
+/* --- Buttons: clean, no neon --- */
+.btn-primary {
+  background: var(--primary);
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+  transform: translateY(-2px);
+}
+.btn-accent {
+  background: transparent;
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  color: var(--accent) !important;
+}
+.btn-accent:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--primary);
+  box-shadow: none;
+}
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary) !important;
+}
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* --- Avatar: clean border, remove neon glow --- */
+.avatar-wrapper {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3), 0 16px 48px rgba(0,0,0,0.4);
+}
+
+/* --- Hero badges: muted professional look --- */
+.hero-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+.hero-badge i { color: var(--primary); }
+
+/* --- Tags: clean pill style --- */
+.tag {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* --- Section title line: indigo only --- */
+.section-title::after {
+  background: linear-gradient(90deg, var(--primary), transparent) !important;
+}
+
+/* --- Stat items: no bg, just border --- */
+.stat-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* --- Scroll progress: indigo only --- */
+.scroll-progress {
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+}
+
+/* --- Contact featured: indigo subtle --- */
+.contact-card-featured {
+  background: rgba(99, 102, 241, 0.06) !important;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* --- Footer: minimal --- */
+.footer {
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
